@@ -13,7 +13,7 @@
 ## Author: ALeX Kazik, Sylvanaar, Pazza
 ## X-Category: Library
 
-## OptionalDeps: LibStub, CallbackHandler-1.0
+## OptionalDeps: LibStub, CallbackHandler-1.0, LibSimpleTester, LibEventChain
 
 ## LoadOnDemand: 1
 
