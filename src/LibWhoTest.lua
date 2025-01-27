@@ -117,9 +117,10 @@ end
 --
 
 -- You can add a filter after the command. E.g., /wholib-test ReportTest
-SLASH_WHOLIB_TEST1 = '/wholib-test'
-SlashCmdList['WHOLIB_TEST'] = function(msg)
-  local test_list = {
+tester:CreateTestCommand(
+  '/wholib-test',
+  'WHOLIB_TEST',
+  {
     functionalTest_Who_ShouldReturnResults =
         functionalTest_Who_ShouldReturnResults,
     functionalTest_C_FriendList_SendWho_ShouldGetQueuedIfFollowingAQuietQuery =
@@ -127,14 +128,7 @@ SlashCmdList['WHOLIB_TEST'] = function(msg)
     functionalTest_C_FriendList_SendWho_ShouldHonorSetWhoToUi =
         functionalTest_C_FriendList_SendWho_ShouldHonorSetWhoToUi,
   }
-  tester:PushTestsWithFilter(test_list, msg)
-  tester:StartTest()
-end
-
-function tester:GetAFrame()
-  if not tester.frame then tester.frame = CreateFrame('Frame') end
-  return tester.frame
-end
+)
 
 ---Prints test message in special color.
 ---
