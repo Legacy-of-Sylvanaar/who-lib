@@ -1,13 +1,13 @@
 --[[
     @file LibWho-Test.lua
-    @brief Test cases for LibWho-2.0.
+    @brief Test cases for LibWho-3.0.
 
     This file contains the tests that can be run to verify the functionality of WhoLib.
 ]]
 
 local eventchain = LibStub('LibEventChain')
 local tester = LibStub('LibSimpleTester')
-local lib = LibStub('LibWho-2.0')
+local lib = LibStub('LibWho-3.0')
 if IntellisenseTrick_ExposeGlobal then
   lib = LibWho
   tester = LibSimpleTester

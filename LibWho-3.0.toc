@@ -1,16 +1,11 @@
-#@retail@
-## Interface: 80200
-#@end-retail@
-#@non-retail@
-# ## Interface: 11302
-#@end-non-retail@
+## Interface: 110007
 
 ## X-Curse-Project-ID: 14897
 
-## Title: Lib: LibWho-2.0
-## Notes: Queing of /who and SendWho() queries and a much better interface (see docs), with gurantee to be executed & callback.
+## Title: LibWho-3.0
+## Notes: A much better interface (see docs), with gurantee to be executed & callback.
 ## Version: @project-version@
-## Author: ALeX Kazik, Sylvanaar, Pazza
+## Author: ALeX Kazik, Sylvanaar, Pazza, Hsiwei Chang
 ## X-Category: Library
 
 ## OptionalDeps: LibStub, CallbackHandler-1.0, LibSimpleTester, LibEventChain
@@ -20,6 +15,9 @@
 #@no-lib-strip@
 libs\LibStub\LibStub.lua
 libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
+libs\LibSimpleTester\src\LibSimpleTester.lua
+libs\LibEventChain\src\LibEventChain.lua
 #@end-no-lib-strip@
 
-LibWho-2.0\LibWho-2.0.lua
+src\LibWho-3.0.lua
+src\LibWhoTest.lua
