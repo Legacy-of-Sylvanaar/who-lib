@@ -14,7 +14,7 @@ end -- if
 assert(LibStub, 'LibWho-3.0 requires LibStub')
 
 local major_version = 'LibWho-3.0'
-local minor_version = tonumber(("@project-version@"):match("%d+%.%d+%.(%d+)")) or 99999
+local minor_version = tonumber(("3.0.1"):match("%d+%.%d+%.(%d+)")) or 99999
 
 local lib = LibStub:NewLibrary(major_version, minor_version)
 
@@ -601,11 +601,6 @@ for _, name in pairs(CFL_hooks) do
     _G['C_FriendList'][name] = function(...) lib.hook[name](lib, ...) end -- function
   end                                                                     -- if
 end                                                                       -- for
-
--- check for unused hooks -> remove function
-for name, _ in pairs(lib['hook']) do
-  if not hooks[name] then lib['hook'][name] = function() end end -- if
-end                                                              -- for
 
 ---
 --- hook replacements
