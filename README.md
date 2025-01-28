@@ -38,8 +38,6 @@ LibStub('LibWho-3.0'):Who('77-80 c-"Warrior"', YourCallback)
 Check [WhoInfo](https://warcraft.wiki.gg/wiki/API_C_FriendList.GetWhoInfo) for the detailed fields.
 #### Example
 Check [here](#usage) to see the example.
-#### Remarks
-If you're only interested in the information of one player, use :UserInfo() instead. (You can set opts.timeout to 0 if you don't accept cached data.)
 
 ### :SetWhoLibDebug(state)
 #### Args
