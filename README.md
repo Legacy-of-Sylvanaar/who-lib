@@ -88,3 +88,23 @@ AllQueuesEmpty function: 0000...
 Runs self tests.
 
 Note the tests contains functions that mostly require the player clicks without doing anything else (however, you can still walk around to feel the world). Due to the throttling of `SendWho` API, the tests can take minutes to complete.
+
+## BigWigsMods Packager .pkgmeta
+
+To use the packager to package your addon with WhoLib-3.0, here are example settings for you.
+
+### Minimal dependency
+
+```
+externals:
+  libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
+  libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
+  libs/LibWho-3.0: https://github.com/Legacy-of-Sylvanaar/who-lib.git
+
+ignore:
+  - libs/LibStub/tests
+  - "libs/*/*.toc"
+  - "libs/*/LICENSE"
+  - "libs/*/README.md"
+  - "libs/*/*Test.lua"
+```
