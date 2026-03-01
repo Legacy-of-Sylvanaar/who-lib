@@ -1,4 +1,4 @@
-## Interface: 110007
+## Interface: 120000
 
 ## X-Curse-Project-ID: 14897
 
@@ -8,13 +8,12 @@
 ## Author: ALeX Kazik, Sylvanaar, Pazza, Hsiwei Chang
 ## X-Category: Library
 
-## OptionalDeps: LibStub, CallbackHandler-1.0, LibSimpleTester, LibEventChain
+## OptionalDeps: LibStub, LibSimpleTester, LibEventChain
 
 ## LoadOnDemand: 1
 
 #@no-lib-strip@
 libs\LibStub\LibStub.lua
-libs\CallbackHandler-1.0\CallbackHandler-1.0.lua
 libs\LibSimpleTester\src\LibSimpleTester.lua
 libs\LibEventChain\src\LibEventChain.lua
 #@end-no-lib-strip@

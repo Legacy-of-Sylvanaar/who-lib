@@ -25,8 +25,6 @@ if not lib then
 end
 
 -- todo: localizations
-lib.callbacks = lib.callbacks or LibStub('CallbackHandler-1.0'):New(lib)
-local callbacks = lib.callbacks
 
 local am = {}
 local om = getmetatable(lib)
@@ -371,7 +369,6 @@ lib['frame']:SetScript('OnUpdate', function(frame, elapsed)
   lib.Timeout_time = lib.Timeout_time - elapsed
   if lib.Timeout_time <= 0 then
     lib['frame']:Hide()
-    lib:TriggerEvent('WHOLIB_READY')
   end -- if
 end);
 
@@ -407,7 +404,6 @@ function lib:AskWho(args)
     '"' .. args.query .. '",',
     'queues=' .. self:debugQueueString()
   )
-  self:TriggerEvent('WHOLIB_QUERY_ADDED')
 end
 
 ---Shows the debug queue element counts.
@@ -566,14 +562,6 @@ local MULTIBYTE_FIRST_CHAR = '^([\192-\255]?%a?[\128-\191]*)'
 function lib:CapitalizeInitial(name)
   return name:gsub(MULTIBYTE_FIRST_CHAR, string.upper, 1)
 end
-
----
---- user events (Using CallbackHandler)
----
-
-lib.PossibleEvents = {'WHOLIB_QUERY_RESULT', 'WHOLIB_QUERY_ADDED', 'WHOLIB_READY'}
-
-function lib:TriggerEvent(event, ...) callbacks:Fire(event, ...) end
 
 ---
 --- hook activation
