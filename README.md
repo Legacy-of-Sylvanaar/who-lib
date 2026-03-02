@@ -98,7 +98,6 @@ To use the packager to package your addon with WhoLib-3.0, here are example sett
 ```
 externals:
   libs/LibStub: https://repos.wowace.com/wow/libstub/trunk
-  libs/CallbackHandler-1.0: https://repos.wowace.com/wow/callbackhandler/trunk/CallbackHandler-1.0
   libs/LibWho-3.0: https://github.com/Legacy-of-Sylvanaar/who-lib.git
 
 ignore:
